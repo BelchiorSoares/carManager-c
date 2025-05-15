@@ -69,7 +69,7 @@ make
 
 ## 📅 Roadmap Futuro
 
-* [ ] Interface em terminal com menu dinâmico
+* [x] Interface em terminal com menu dinâmico
 * [ ] Uso de ponteiros e listas dinâmicas
 * [ ] Exportação de relatórios em formato CSV
 * [ ] Testes automatizados com assert.h
