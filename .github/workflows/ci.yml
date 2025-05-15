@@ -1,0 +1,24 @@
+name: Compilar Projeto C
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositório
+      uses: actions/checkout@v3
+
+    - name: Instalar ferramentas necessárias
+      run: sudo apt update && sudo apt install -y build-essential
+
+    - name: Compilar o projeto com Makefile
+      run: make
+
+    - name: Verificar se o executável foi gerado
+      run: test -f build/programa
